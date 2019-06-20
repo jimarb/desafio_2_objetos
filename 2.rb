@@ -23,7 +23,7 @@ data = file.readlines
 file.close
 data.each do |lines|
     course_name, start_date, end_date = lines.split(', ')
-    courses << Course.new(course_name, *start_date, end_date)
+    courses << Course.new(course_name, start_date, end_date)
 end
 
 courses.each do |course|
